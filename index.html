@@ -27,7 +27,6 @@
     </script>
   </head>
   <body>
-    <!-- <lottie-player src="assets/img/lottie/muffin_1.json" background="transparent" speed="1" loop autoplay></lottie-player> -->
     <main id="wrapper">
       <header class="header"><h1 class="logo">Muffin</h1></header>
 
@@ -137,7 +136,6 @@
     </main>
     <!-- //container -->
 
-    <!-- <script src="assets/js/swiper-bundle.min.js"></script> -->
     <script src="assets/js/lottie-player.js"></script>
     <script>
       let timer
@@ -147,7 +145,6 @@
       const floating = document.querySelector(".floating")
       const words = document.querySelectorAll(".wrap-word .item")
       const imgs = document.querySelectorAll(".wrap-imgs .section-img")
-      // const imgs
 
       // 로고 색상 컨트롤
       const logoFunc = (st, wh) => logo.classList[wh - 80 < st ? "add" : "remove"]("active") // 로고가 절반 걸치는 부분에서 색상 변경
@@ -189,14 +186,8 @@
       // 창 리사이즈 이벤트 (최적화 0.5초 텀)
       window.addEventListener("resize", () => {
         clearTimeout(timer)
-        timer = setTimeout(() => mainFunc(window.scrollY || document.documentElement.scrollTop, window.innerHeight), 500) // resize event
+        timer = setTimeout(() => mainFunc(window.scrollY || document.documentElement.scrollTop, window.innerHeight), 500)
       })
-
-      // 테스트용 스크립트
-      // floating.addEventListener("click", ({ target }) => {
-      //   const classList = target.classList
-      //   classList[[...classList].includes("active") ? "remove" : "add"]("active")
-      // })
     </script>
   </body>
 </html>
