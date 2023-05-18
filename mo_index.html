@@ -13,291 +13,187 @@
     <meta property="og:url" content="http://skmuffin.com" />
     <meta property="og:image" content="assets/img/muffin_img.png" />
     <link rel="shortcut icon" href="assets/img/favicon.png" />
-    <link rel="stylesheet" href="assets/css/style.css" />
-    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="assets/css/m-style.css" />
     <title>혜택이 넘치는 내 차 관리 서비스, 머핀</title>
     <script>
-      (function () {
-        if (!/Mobi/i.test(window.navigator.userAgent)) location.replace("index.html");
-      })();
+      ;(function () {
+        if (!/Mobi/i.test(window.navigator.userAgent)) location.replace("index.html")
+      })()
       function setFontSize() {
         var doc = document.documentElement,
-          fontSizeVal = parseInt((doc.clientWidth / 375) * 62.5 * 10) / 10;
-        fontSizeVal = fontSizeVal >= 125 ? 125 : fontSizeVal;
+          fontSizeVal = parseInt((doc.clientWidth / 375) * 62.5 * 10) / 10
+        fontSizeVal = fontSizeVal >= 125 ? 125 : fontSizeVal
 
-        doc.style.fontSize = fontSizeVal + "%";
+        doc.style.fontSize = fontSizeVal + "%"
       }
-      setFontSize();
-      window.addEventListener("resize", setFontSize);
+      setFontSize()
+      window.addEventListener("resize", setFontSize)
     </script>
   </head>
   <body>
-    <div id="mo-wrapper">
-      <!-- header -->
-      <header class="mo-header">
-        <h1 class="logo" id="jsLogo">muffin</h1>
-      </header>
-      <!-- //header -->
+    <!-- container -->
+    <main id="mo-wrapper">
+      <div class="floating-wrap">
+        <header class="header"><h1 class="logo">Muffin</h1></header>
 
-      <!-- container -->
-      <div class="mo-container">
-        <div class="swiper-container mo-main-slide">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <div class="cont1" data-swiper-parallax-y="100%">
-                <div class="bg-img"></div>
-                <div class="inner">
-                  <p class="tit">혜택이 넘치는<br />내 차 관리 서비스</p>
-                  <p class="txt">
-                    <strong>Must have item<br />muffin</strong>
-                  </p>
-                  <div class="wrap-btn">
-                    <button type="button" class="btn-download android" onclick="goStore('android')">Google Play</button>
-                    <button type="button" class="btn-download ios" onclick="goStore('ios')">App Store</button>
-                  </div>
-                </div>
+        <div class="section section1">
+          <div style="display: none; position: absolute; top: 50%; left: 50%; width: 100%; height: 66.7rem; transform: translate(-50%, -50%); z-index: 100; opacity: 0.5"><img src="assets/img/m-test1.png" alt="" /></div>
+
+          <div class="section-inner">
+            <div class="box-text">
+              <p class="title">
+                머핀과 함께하는<br />편리한<span class="wrap-word"><em class="item">주유</em><em class="item">세차</em><em class="item">충전</em><em class="item">적립</em></span>
+              </p>
+            </div>
+            <div class="box-img">
+              <div class="wrap-imgs">
+                <img src="assets/img/img-section1-1.png" class="section-img" alt="" />
+                <img src="assets/img/img-section1-2.png" class="section-img" alt="" />
+                <img src="assets/img/img-section1-3.png" class="section-img" alt="" />
+                <img src="assets/img/img-section1-4.png" class="section-img" alt="" />
               </div>
             </div>
-
-            <div class="swiper-slide">
-              <div class="cont2" data-swiper-parallax-y="100%">
-                <div class="inner">
-                  <p class="tit"><span class="point1">혜택</span>이 내린다.</p>
-                  <p class="txt">주유 이용 시 <span class="point1">머핀 포인트 1.8~2원/ℓ 적립</span></p>
-                  <p class="txt">주유ㆍ세차 상품 구매 시 <span class="point1">포인트 사용</span> (1원 단위)</p>
-                  <p class="txt">충전 이용 시 <span class="point1">OK 캐시백 0.5% 적립</span></p>
-                  <div class="thumb img1"><img src="assets/img/icon-coupon.png" alt="" /></div>
-                  <div class="thumb img2"><img src="assets/img/icon-coupon.gif" alt="" /></div>
-                  <div class="wrap-btn">
-                    <button type="button" class="btn-download android" onclick="goStore('android')">Google Play</button>
-                    <button type="button" class="btn-download ios" onclick="goStore('ios')">App Store</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="swiper-slide">
-              <div class="cont3" data-swiper-parallax-y="100%">
-                <div class="inner">
-                  <p class="tit"><span class="point2">원터치</span>로<br />예약 하세요.</p>
-                  <p class="txt">평소 이용하는 주유/LPG 패턴을 미리 등록하고<br />원터치로 예약하세요.</p>
-                  <div class="thumb img1"><img src="assets/img/icon-oil.png" alt="" /></div>
-                  <div class="thumb img2"><img src="assets/img/icon-oil.gif" alt="" /></div>
-                  <div class="wrap-btn">
-                    <button type="button" class="btn-download android" onclick="goStore('android')">Google Play</button>
-                    <button type="button" class="btn-download ios" onclick="goStore('ios')">App Store</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="swiper-slide">
-              <div class="cont4" data-swiper-parallax-y="100%">
-                <div class="inner">
-                  <p class="tit"><span class="point1">프리미엄 세차</span>로<br />하차감 UP!</p>
-                  <div class="wrap-tab">
-                    <!-- <ul class="tab-menu">
-                      <li class="active"><a href="#none">출장세차</a></li>
-                      <li><a href="#none">새벽세차</a></li>
-                      <li><a href="#none">손세차</a></li>
-                    </ul> -->
-                    <div class="swiper-container tab-slide">
-                      <ul class="swiper-wrapper">
-                        <!-- <li class="swiper-slide">
-                          <div class="img"><img src="assets/img/icon-cont1.svg" alt="출장세차" /></div>
-                          <p>주차만 해두시면 세차는 전문세차 매니저가<br />책임집니다.</p>
-                        </li>
-                        <li class="swiper-slide">
-                          <div class="img"><img src="assets/img/icon-cont2.svg" alt="새벽세차" /></div>
-                          <p>주무시는 동안 아파트로 찾아가는 방문세차 서비스<br />정기결제로 내 차량을 꾸준하게 관리해보세요.</p>
-                        </li> -->
-                        <li class="swiper-slide">
-                          <div class="img"><img src="assets/img/icon-cont3.svg" alt="손세차" /></div>
-                          <p>엄격한 품질 테스트를 거친<br />프리미엄 디테일링 서비스를 경험해보세요.</p>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                  <div class="wrap-btn">
-                    <button type="button" class="btn-download android" onclick="goStore('android')">Google Play</button>
-                    <button type="button" class="btn-download ios" onclick="goStore('ios')">App Store</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="swiper-slide">
-              <div class="cont5" data-swiper-parallax-y="100%">
-                <footer class="mo-footer">
-                  <div class="info-area">
-                    <p class="tit">머핀과 함께하는<br />파트너사</p>
-                    <ul class="list-partner">
-                      <li>
-                        <a href="https://rupes-store.com/" target="_blank">
-                          <span class="logo"><img src="assets/img/icon-partner1.png" alt="루페스" /></span>
-                          <p class="desc">루페스에서<br />새차보다 더 세차처럼</p>
-                          <p class="txt">Rupes Korea</p>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="http://sonaxkorea.com/" target="_blank">
-                          <span class="logo"><img src="assets/img/icon-partner2.png" alt="소낙스" /></span>
-                          <p class="desc">소낙스는<br />자연과 함께 존재합니다.</p>
-                          <p class="txt">Sonax service</p>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="https://www.sechawang.com/" target="_blank">
-                          <span class="logo"><img src="assets/img/icon-partner3.png" alt="세차왕" /></span>
-                          <p class="desc">세차왕<br />전문가의 방문세차.</p>
-                          <p class="txt">Mobility care service</p>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="http://igotcha.co.kr/" target="_blank">
-                          <span class="logo"><img src="assets/img/icon-partner4.png" alt="갓차" /></span>
-                          <p class="desc">갓차<br />당신을 위한 세차.</p>
-                          <p class="txt">gotcha members</p>
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
-                  <div class="footer-btm">
-                    <small>(C) SK ENERGY CO.,LTD. ALL RIGHTS RESERVED.</small>
-                    <ul class="list-etc">
-                      <li><a href="https://mfo.skmuffin.com/utils/appterms?mct=1" target="_blank">서비스 이용약관</a></li>
-                      <li><strong><a href="https://mfo.skmuffin.com/utils/appterms?mct=2" target="_blank">개인정보 처리방침</a></strong></li>
-                      <li><a href="http://www.skenergy.com/company/overview.asp" target="_blank">회사소개</a></li>
-                    </ul>
-                    <address>
-                      <p>ARS 고객센터 1588-0051/1599-0051</p>
-                      <p>(주) SK에너지, 조경목</p>
-                      <p>서울특별시 종로구 종로 26, 1층.<span>사업자번호 : 101-86-60120</span></p>
-                    </address>
-                  </div>
-                </footer>
-              </div>
-            </div>
-          </div>
-          <div class="swiper-pagination hidden"></div>
-        </div>
-      </div>
-      <!-- //container -->
-    </div>
-
-    <!-- <div class="wrapper-layer">
-      <div class="wrap-mobile-layer">
-        <div class="inner-layer">
-          <div class="head">
-            <h1 class="title">엔크린 멤버십 서비스 <br />정책 변경 안내</h1>
-          </div>
-          <div class="body">
-            <div class="desc">항상 SK주유소를 이용해 주시는 고객 여러분께 <br />감사의 말씀 드립니다. <br />엔크린 멤버십 서비스가 아래와 같이 변경되어 안내 드립니다.</div>
-
-            <div class="wrap-focus-line">
-              <h2 class="title">변경내용</h2>
-              <div class="wrap-info-list">
-                <p class="title">엔크린 멤버십 명칭 및 혜택 변경</p>
-                <ul class="text-list">
-                  <li>[기존] 엔크린 멤버십, OK캐쉬백 포인트, 0.1%적립</li>
-                  <li class="point">[변경] 머핀 멤버십, 머핀 포인트, 리터당 2원 적립<br />※ 2021년 7월 26(월)부터 변경</li>
-                </ul>
-              </div>
-            </div>
-            <div class="wrap-info-list">
-              <p class="title">주요 안내 사항</p>
-              <ul class="text-list">
-                <li>기존에 사용하시던 엔크린 보너스 카드는 그대로 이용 할 수 있습니다. ’21년 7월 26일부터 기존 카드로 머핀 포인트 적립과 사용이 모두 가능합니다.</li>
-                <li>신용/체크카드에 엔크린 보너스 카드 혜택이 제공되고 있는 경우에도 ’21년 7월 26일부터 기존 카드로 머핀 포인트 적립 및 사용이 모두 가능합니다.</li>
-                <li>기존 사용하시던 OK캐쉬백 포인트는 그대로 SK주유소에서 주유 결제 시 사용할 수 있습니다.</li>
-                <li>SK충전소(LPG)는 기존과 동일하게 OK캐쉬백 포인트의 적립및 사용이 가능합니다.</li>
-              </ul>
-              <p>* 추후 변경 시 별도 안내 예정</p>
-            </div>
-          </div>
-          <div class="foot">
-            <p>앞으로 더 좋은 서비스를 위해 노력하겠습니다.<br />엔크린 멤버십 포인트 및 적립율 변경 관련 문의사항은 아래 고객센터로 문의 주시기 바랍니다.</p>
-            <div class="wrap-tel">고객행복센터 <i class="number">1588-0051 / 1599-0051 </i></div>
           </div>
         </div>
-        <a href="javascript:popClose();" class="btn-close">닫기</a>
-      </div>
-      <div class="mask"></div>
-    </div> -->
 
-    <!-- 이벤트 팝업 -->
-    <div class="wrapper-layer main-event">
-      <div class="wrap-mobile-layer">
-        <div class="inner-layer">
-          <div class="head">
-            <h1 class="title">SK에너지 머핀 포인트 행사 안내</h1>
-          </div>
-          <div class="body">
-            <div class="wrap-img"><img src="assets/img/main-event-popup-220830.png" alt="DRIVE INTO NEW ROAD" /></div>
-            <p class="desc">머핀 포인트로 당신의 취향 저격 사은품을 신청하세요!</p>
-            <div class="wrap-button"><a href="https://m.enclean.com/mobile/pointevent/member/index/" target="_blank" class="evt-btn">사은품 신청하기</a></div>
+        <div class="section section2">
+          <div style="display: none; position: absolute; top: 50%; left: 50%; width: 100%; height: 66.7rem; transform: translate(-50%, -50%); z-index: 100; opacity: 0.5"><img src="assets/img/m-test2.png" alt="" /></div>
+          <div class="section-inner">
+            <div class="box-text">
+              <p class="title">머핀 하나로 끝</p>
+              <p class="desc">SK주유소 뿐 아니라<br />세차, 충전에 대한 모든걸 담았어요</p>
+            </div>
+            <div class="box-img">
+              <lottie-player src="assets/img/lottie/img-section2.json" background="transparent" class="section-img" speed="1" loop autoplay></lottie-player>
+            </div>
           </div>
         </div>
-        <a href="javascript:popClose();" class="btn-close"><img src="assets/img/btn_close.png" alt="SK energy" /></a>
-      </div>
-      <div class="mask"></div>
-    </div>
 
-    <script src="assets/js/swiper-bundle.min.js"></script>
+        <div class="section section3">
+          <div style="display: none; position: absolute; top: 50%; left: 50%; width: 100%; height: 66.7rem; transform: translate(-50%, -50%); z-index: 100; opacity: 0.5"><img src="assets/img/m-test3.png" alt="" /></div>
+          <div class="section-inner">
+            <div class="box-text">
+              <p class="title">결제와 적립을 한번에</p>
+              <p class="desc">카드 꺼낼 필요 없이 결제도 적립도<br />머핀으로 할 수 있어요</p>
+            </div>
+            <div class="box-img">
+              <lottie-player src="assets/img/lottie/img-section3.json" background="transparent" class="section-img" speed="1" loop autoplay></lottie-player>
+            </div>
+          </div>
+        </div>
+
+        <div class="section section4">
+          <div style="display: none; position: absolute; top: 50%; left: 50%; width: 100%; height: 66.7rem; transform: translate(-50%, -50%); z-index: 100; opacity: 0.5"><img src="assets/img/m-test4.png" alt="" /></div>
+          <div class="section-inner">
+            <div class="box-text">
+              <p class="title">모든 이용내역을 한눈에</p>
+              <p class="desc">서비스 이용 및 포인트 적립내역을<br />머핀에서 쉽게 확인할 수 있습니다.</p>
+            </div>
+            <div class="box-img">
+              <lottie-player src="assets/img/lottie/img-section4.json" background="transparent" class="section-img" speed="1" loop autoplay></lottie-player>
+            </div>
+          </div>
+        </div>
+
+        <div class="section section5">
+          <div style="display: none; position: absolute; top: 50%; left: 50%; width: 100%; height: 66.7rem; transform: translate(-50%, -50%); z-index: 100; opacity: 0.5"><img src="assets/img/m-test5.png" alt="" /></div>
+          <div class="section-inner">
+            <div class="box-text">
+              <p class="sub-title">서비스를 잇다, 편리함을 열다</p>
+              <p class="title">새로운 모빌리티 라이프를<br />지금 시작해 보세요</p>
+            </div>
+          </div>
+        </div>
+
+        <aside class="floating">
+          <a href="javascript:;" class="btn-type1">앱 다운로드</a>
+        </aside>
+      </div>
+
+      <footer class="footer">
+        <div style="display: none; position: absolute; top: 0; left: 50%; width: 100%; height: 35.4rem; transform: translateX(-50%); z-index: 100; opacity: 0.5"><img src="assets/img/m-testF.png" alt="" /></div>
+        <div class="footer-inner">
+          <div class="wrap-links">
+            <a href="http://www.skenergy.com/company/overview.asp" target="_blank" class="item">회사소개</a>
+            <a href="https://mfo.stg.skmuffin.com/terms/termsOfUse.html" target="_blank" class="item">이용약관</a>
+            <a href="https://mfo.stg.skmuffin.com/terms/privacyPolicy.html" target="_blank" class="item">개인정보처리방침</a>
+            <a href="https://sketts.tistory.com/" target="_blank" class="item">머핀메이커스</a>
+            <a href="https://sketts.tistory.com/category/Recruit" target="_blank" class="item">채용사이트</a>
+          </div>
+          <div class="wrap-info">
+            <p class="item"><span class="item-inner">대표이사 사장 조경목</span><span class="item-inner">서울 종로구 종로 26</span></p>
+            <p class="item">고객센터 <a href="tel: 1588-0051">1588-0051</a> (평일 09:00~18:00)</p>
+            <p class="item">사업자등록번호 101-86-60120</p>
+          </div>
+          <p class="copyright">(주)SK에너지 Copyright<br />ⓒ. SK energy All Rights Reserved</p>
+          <i class="logo-footer">SK에너지</i>
+        </div>
+      </footer>
+    </main>
+    <!-- //container -->
+
+    <script src="assets/js/lottie-player.js"></script>
     <script>
-      var swiper = new Swiper(".mo-main-slide", {
-        direction: "vertical",
-        pagination: {
-          el: ".mo-main-slide > .swiper-pagination",
-        },
-        mousewheel: {
-          invert: false,
-        },
-        speed: 1000,
-        parallax: true,
-      });
-      swiper.on("slideChange", function () {
-        var idx = swiper.activeIndex;
-        document.querySelector("#jsLogo").classList.toggle("active", idx !== 0);
-        document.querySelector(".mo-main-slide > .swiper-pagination").classList.toggle("hidden", idx === 0 || idx === 4);
-        document.querySelector("#jsLogo").classList.toggle("hidden", idx === 4);
-      });
-      swiper.on("slideChangeTransitionEnd", function () {
-        var $wrap = document.querySelector(".mo-main-slide");
-        var $tgt = $wrap.querySelectorAll(".swiper-slide");
-        $tgt.forEach((item) => item.classList.remove("action"));
+      let timer
+      let count = 0
+      const header = document.querySelector(".header")
+      const logo = header.querySelector(".logo")
+      const floatingWrap = document.querySelector(".floating-wrap")
+      const floating = document.querySelector(".floating")
+      const words = document.querySelectorAll(".wrap-word .item")
+      const imgs = document.querySelectorAll(".wrap-imgs .section-img")
 
-        $wrap.querySelector(".swiper-slide-active").classList.add("action");
-      });
+      // 로고 색상 컨트롤
+      const logoFunc = (st, wh) => {
+        const logoHeight = logo.clientHeight // 로고 높이
+        const logoOffset = logo.getBoundingClientRect().top // 로고 상단 간격
 
-      var innerSwiper = new Swiper(".tab-slide", {
-        effect: "fade",
-        fadeEffect: {
-          crossFade: true,
-        },
-        pagination: {
-          el: ".wrap-tab > .tab-menu",
-          bulletClass: "list",
-          bulletActiveClass: "active",
-          clickable: true,
-          renderBullet: function (index, className) {
-            var desc = ["출장세차", "새벽세차", "손세차"];
-            return '<li class="' + className + '"><a href="javascript:;">' + desc[index] + "</a></li>";
-          },
-        },
-        centeredSlides: true,
-        speed: 500,
-      });
+        header.classList[st > wh ? "add" : "remove"]("active") // 헤더 라인 컨트롤
+        logo.classList[st > wh - logoOffset - logoHeight / 2 ? "add" : "remove"]("active") // 헤더 로고 컨트롤
+      } // 로고가 절반 걸치는 부분에서 색상 변경
 
-      function goStore(platform) {
-        const store = platform === "ios" ? "https://itunes.apple.com/app/id1507316276" : "https://play.google.com/store/apps/details?id=com.ske.phone.epay";
-        // location.href = store;
-        window.open(store, "", "");
+      // 플로팅 QR 배너 컨트롤
+      const floatingFunc = (st, wh) => {
+        const btnHeight = floating.clientHeight // 버튼 높이
+        const bottomDis = wh - floating.getBoundingClientRect().top - btnHeight // 버튼 하단 간격
+
+        floating.classList[st > bottomDis + btnHeight / 2 ? "add" : "remove"]("active") // 버픈 색상 변환
+        floating.classList[floatingWrap.clientHeight - wh < st ? "add" : "remove"]("fix") // 버튼 위치 고정 (하단)
       }
 
-      function popClose() {
-        document.querySelector(".wrapper-layer").style.cssText = "display:none";
+      // 비주얼 영역 애니메이션 동작 컨트롤
+      const topAnimate = () => {
+        const doActive = (items) => {
+          items.forEach((e) => e.classList.remove("active"))
+          items[count % items.length].classList.add("active")
+        }
+        doActive(words) // 텍스트 스크롤링
+        doActive(imgs) // 이미지 스크롤링
+        count++
       }
+
+      const mainFunc = (st, wh) => {
+        logoFunc(st, wh)
+        floatingFunc(st, wh)
+      }
+
+      // 화면 로드 시 실행
+      mainFunc(window.scrollY || document.documentElement.scrollTop, window.innerHeight)
+
+      // 비주얼 영역 애니메이션 동작 (첫 사이클 동작 0.5초 지연 + 2.4초마다 동작)
+      setTimeout(() => {
+        topAnimate()
+        setInterval(topAnimate, 2400)
+      }, 500)
+
+      // 스크롤 이벤트
+      window.addEventListener("scroll", () => mainFunc(window.scrollY || document.documentElement.scrollTop, window.innerHeight))
+
+      // 창 리사이즈 이벤트 (최적화 0.5초 텀)
+      window.addEventListener("resize", () => {
+        clearTimeout(timer)
+        timer = setTimeout(() => mainFunc(window.scrollY || document.documentElement.scrollTop, window.innerHeight), 500)
+      })
     </script>
   </body>
 </html>
