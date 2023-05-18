@@ -10,11 +10,6 @@
     background: $pcF;
     box-shadow: 0 0.1rem 0 rgba(0, 0, 0, 0.08);
   }
-  .logo {
-    &.active {
-      filter: brightness(1);
-    }
-  }
 }
 
 .footer {
@@ -87,6 +82,10 @@
   background: url(../img/logo.svg) 0 0 / 100% auto no-repeat;
   filter: brightness(100);
   @include blind();
+
+  &.active {
+    filter: unset;
+  }
 }
 
 .logo-footer {

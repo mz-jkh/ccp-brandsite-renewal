@@ -136,6 +136,7 @@
     <script>
       let timer
       let count = 0
+      const sectionHeight = document.querySelector(".section1")
       const header = document.querySelector(".header")
       const logo = header.querySelector(".logo")
       const floatingWrap = document.querySelector(".floating-wrap")
@@ -148,17 +149,17 @@
         const logoHeight = logo.clientHeight // 로고 높이
         const logoOffset = logo.getBoundingClientRect().top // 로고 상단 간격
 
-        header.classList[st > wh ? "add" : "remove"]("active") // 헤더 라인 컨트롤
-        logo.classList[st > wh - logoOffset - logoHeight / 2 ? "add" : "remove"]("active") // 헤더 로고 컨트롤
+        header.classList[st > sectionHeight ? "add" : "remove"]("active") // 헤더 라인 컨트롤
+        logo.classList[st > sectionHeight - logoOffset - logoHeight / 2 ? "add" : "remove"]("active") // 헤더 로고 컨트롤
       } // 로고가 절반 걸치는 부분에서 색상 변경
 
       // 플로팅 QR 배너 컨트롤
       const floatingFunc = (st, wh) => {
         const btnHeight = floating.clientHeight // 버튼 높이
-        const bottomDis = wh - floating.getBoundingClientRect().top - btnHeight // 버튼 하단 간격
+        const bottomDis = sectionHeight - floating.getBoundingClientRect().top - btnHeight // 버튼 하단 간격
 
         floating.classList[st > bottomDis + btnHeight / 2 ? "add" : "remove"]("active") // 버픈 색상 변환
-        floating.classList[floatingWrap.clientHeight - wh < st ? "add" : "remove"]("fix") // 버튼 위치 고정 (하단)
+        floating.classList[floatingWrap.clientHeight - sectionHeight < st ? "add" : "remove"]("fix") // 버튼 위치 고정 (하단)
       }
 
       // 비주얼 영역 애니메이션 동작 컨트롤
