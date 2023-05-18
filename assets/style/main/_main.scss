@@ -24,6 +24,7 @@
   width: 101px;
   height: 47px;
   background: url(../img/logo-footer.svg) 0 0 / 100% auto no-repeat;
+  @include blind();
 }
 
 .icon-aos {
@@ -33,6 +34,7 @@
   margin: 35px 10px 0 0;
   background: url(../img/icon-aos.svg) 0 0 / 100% auto no-repeat;
   vertical-align: top;
+  @include blind();
 }
 
 .icon-ios {
@@ -42,6 +44,7 @@
   margin: 23px -10px 0 -10px;
   background: url(../img/icon-ios.svg) 0 0 / auto 100% no-repeat;
   vertical-align: top;
+  @include blind();
 }
 
 .wrap-btn {
