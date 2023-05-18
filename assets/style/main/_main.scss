@@ -72,7 +72,7 @@
 
 .section {
   width: 100%;
-  height: 100vh;
+  height: 1080px;
 
   position: relative;
   // border: 1px solid black;
@@ -137,6 +137,7 @@
   }
 
   &.section1 {
+    height: 100vh;
     color: $pcF;
     background: url(../img/bg-visual-side.png) 0 0 / auto 100% repeat-x;
 
@@ -277,6 +278,7 @@
   }
   .wrap-links {
     display: flex;
+    padding-left: 1px;
 
     .item {
       display: inline-block;
@@ -284,7 +286,7 @@
       font-weight: 600;
       line-height: 1.2;
       color: $pc4;
-      letter-spacing: 0.12em;
+      letter-spacing: 0.115em;
 
       &:not(:first-of-type) {
         margin-left: 24px;
