@@ -136,7 +136,7 @@
     <script>
       let timer
       let count = 0
-      const sectionHeight = document.querySelector(".section1")
+      const section = document.querySelector(".section1")
       const header = document.querySelector(".header")
       const logo = header.querySelector(".logo")
       const floatingWrap = document.querySelector(".floating-wrap")
@@ -146,8 +146,12 @@
 
       // 로고 색상 컨트롤
       const logoFunc = (st, wh) => {
+        const logo = header.querySelector(".logo")
+        const sectionHeight = section.clientHeight
         const logoHeight = logo.clientHeight // 로고 높이
         const logoOffset = logo.getBoundingClientRect().top // 로고 상단 간격
+
+        console.log(154, logoOffset)
 
         header.classList[st > sectionHeight ? "add" : "remove"]("active") // 헤더 라인 컨트롤
         logo.classList[st > sectionHeight - logoOffset - logoHeight / 2 ? "add" : "remove"]("active") // 헤더 로고 컨트롤
@@ -155,6 +159,7 @@
 
       // 플로팅 QR 배너 컨트롤
       const floatingFunc = (st, wh) => {
+        const sectionHeight = section.clientHeight
         const btnHeight = floating.clientHeight // 버튼 높이
         const bottomDis = sectionHeight - floating.getBoundingClientRect().top - btnHeight // 버튼 하단 간격
 
