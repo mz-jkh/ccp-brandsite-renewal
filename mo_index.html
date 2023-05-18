@@ -151,8 +151,6 @@
         const logoHeight = logo.clientHeight // 로고 높이
         const logoOffset = logo.getBoundingClientRect().top // 로고 상단 간격
 
-        console.log(154, logoOffset)
-
         header.classList[st > sectionHeight ? "add" : "remove"]("active") // 헤더 라인 컨트롤
         logo.classList[st > sectionHeight - logoOffset - logoHeight / 2 ? "add" : "remove"]("active") // 헤더 로고 컨트롤
       } // 로고가 절반 걸치는 부분에서 색상 변경
