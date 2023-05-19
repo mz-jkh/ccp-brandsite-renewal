@@ -80,7 +80,7 @@
 
   .section-inner {
     position: relative;
-    max-width: 1920px;
+    // max-width: 1920px;
     height: 100%;
     margin: 0 auto;
   }
@@ -282,11 +282,11 @@
 
     .item {
       display: inline-block;
-      font-size: 16px;
+      font-size: 18px;
       font-weight: 600;
       line-height: 1.2;
       color: $pc4;
-      letter-spacing: 0.115em;
+      letter-spacing: 0;
 
       &:not(:first-of-type) {
         margin-left: 24px;
