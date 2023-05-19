@@ -142,7 +142,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  height: 66.7rem; // 디자인 높이
 
   .section-inner {
   }
@@ -177,6 +177,7 @@
   //   text-align: center;
   // }
   &.section1 {
+    height: 100vh;
     background: url(../img/m-bg-visual.png) 0 0 / 100% auto no-repeat;
 
     .section-inner {
