@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="ko" style="font-size: 125%">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -19,15 +19,6 @@
       ;(function () {
         if (!/Mobi/i.test(window.navigator.userAgent)) location.replace("index.html")
       })()
-      function setFontSize() {
-        var doc = document.documentElement,
-          fontSizeVal = parseInt((doc.clientWidth / 375) * 62.5 * 10) / 10
-        fontSizeVal = fontSizeVal >= 125 ? 125 : fontSizeVal
-
-        doc.style.fontSize = fontSizeVal + "%"
-      }
-      setFontSize()
-      window.addEventListener("resize", setFontSize)
     </script>
   </head>
   <body>
@@ -137,6 +128,15 @@
       const words = document.querySelectorAll(".wrap-word .item")
       const imgs = document.querySelectorAll(".wrap-imgs .section-img")
 
+      const setFontSize = () => {
+        var doc = document.documentElement,
+          fontSizeVal = parseInt((doc.clientWidth / 375) * 62.5 * 10) / 10
+        fontSizeVal = fontSizeVal >= 125 ? 125 : fontSizeVal
+
+        doc.style.fontSize = fontSizeVal + "%"
+        console.log(doc.clientWidth, fontSizeVal)
+      }
+
       // 로고 색상 컨트롤
       const logoFunc = (st, wh) => {
         const logo = header.querySelector(".logo")
@@ -175,6 +175,7 @@
       }
 
       // 화면 로드 시 실행
+      setFontSize()
       mainFunc(window.scrollY || document.documentElement.scrollTop, window.innerHeight)
 
       // 비주얼 영역 애니메이션 동작 (첫 사이클 동작 0.5초 지연 + 2.4초마다 동작)
@@ -191,6 +192,8 @@
         clearTimeout(timer)
         timer = setTimeout(() => mainFunc(window.scrollY || document.documentElement.scrollTop, window.innerHeight), 500)
       })
+
+      window.addEventListener("resize", setFontSize)
     </script>
   </body>
 </html>
