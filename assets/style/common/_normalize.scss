@@ -170,19 +170,6 @@ span {
   outline: none;
 }
 
-// @font-face {
-//   font-family: "Moebius";
-//   src: url("../font/MoebiusRegular.eot");
-//   src: url("../font/MoebiusRegular.woff2") format("woff2"), url("../font/MoebiusRegular.woff") format("woff");
-// }
-
-// @font-face {
-//   font-family: "Moebius";
-//   font-weight: 700;
-//   src: url("../font/MoebiusBold.eot");
-//   src: url("../font/MoebiusBold.woff2") format("woff2"), url("../font/MoebiusBold.woff") format("woff");
-// }
-
 @font-face {
   font-family: "Pretendard";
   src: url("../font/Pretendard-Regular.eot");
@@ -206,8 +193,6 @@ span {
 html {
   box-sizing: border-box;
   max-height: 99999em;
-  // padding-bottom: constant(safe-area-inset-bottom);
-  // padding-bottom: env(safe-area-inset-bottom);
 }
 
 // normalize

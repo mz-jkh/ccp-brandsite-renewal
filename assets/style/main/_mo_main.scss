@@ -1,6 +1,3 @@
-// #mo-wrapper {
-//   font-family: 맑은 고딕, malgun gothic, AppleGothicNeoSD, Apple SD 산돌고딕 Neo, Microsoft NeoGothic, Droid sans, sans-serif;
-// }
 .header {
   position: fixed;
   top: -1rem;
@@ -131,14 +128,6 @@
       position: absolute;
     }
   }
-
-  // .floating {
-  //   position: sticky;
-  //   left: 50%;
-  //   top: 1rem;
-  //   margin-left: -6.8rem;
-  //   letter-spacing: 0;
-  // }
 }
 
 .section {
@@ -148,8 +137,6 @@
   justify-content: center;
   height: 66.7rem; // 디자인 높이
 
-  .section-inner {
-  }
   .box-text {
     text-align: center;
 
@@ -177,9 +164,6 @@
       letter-spacing: 0;
     }
   }
-  // .box-img {
-  //   text-align: center;
-  // }
   &.section1 {
     height: 100vh;
     background: url(../img/m-bg-visual.png) 0 0 / 100% auto no-repeat;
@@ -262,12 +246,8 @@
   }
 
   &.section4 {
-    .section-inner {
-      // margin-top: 0rem;
-    }
     .section-img {
       width: 36rem;
-      // margin-top: 4rem;
     }
   }
 
